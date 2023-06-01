@@ -9,11 +9,16 @@ public class HomeController {
     @RequestMapping("/")
     public String show()
     {
-        return "layout/layout";
+        return "home/index";
     }
-    @RequestMapping("/index")
-    public String showhome()
+    @RequestMapping("/categories")
+    public String showCategories()
     {
-        return "index";
+        return "categories/index";
+    }
+    @RequestMapping("/details")
+    public String showDetails()
+    {
+        return "categories/detail";
     }
 }
