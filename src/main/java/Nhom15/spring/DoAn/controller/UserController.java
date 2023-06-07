@@ -1,5 +1,5 @@
 //package Nhom15.spring.DoAn.controller;
-//
+
 //import Nhom15.spring.DoAn.entity.User;
 //import Nhom15.spring.DoAn.service.UserService;
 //import jakarta.validation.Valid;
@@ -46,3 +46,5 @@
 //        return "redirect:/login";
 //    }
 //}
+
+//Làm Đăng ký đăng nhập
