@@ -9,8 +9,12 @@ public class HomeController {
     @RequestMapping("/")
     public String show()
     {
-        return "layout/layout";
+        return "home/index";
     }
+   /* @RequestMapping("/categories")
+    public String showCategories(){
+
+    }*/
     @RequestMapping("/index")
     public String showhome()
     {
