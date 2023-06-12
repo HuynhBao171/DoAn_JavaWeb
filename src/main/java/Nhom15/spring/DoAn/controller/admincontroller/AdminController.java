@@ -1,4 +1,4 @@
-package Nhom15.spring.DoAn.controller;
+package Nhom15.spring.DoAn.controller.admincontroller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
