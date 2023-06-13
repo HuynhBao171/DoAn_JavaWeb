@@ -15,4 +15,9 @@ public class AdminController {
         return "admin/home/index_admin";
     }
 
+    @GetMapping("/category")
+    public String category()
+    {
+        return "admin/categories/index";
+    }
 }
