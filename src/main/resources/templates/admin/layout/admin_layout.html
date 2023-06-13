@@ -1,7 +1,8 @@
 
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      >
 
 <head>
     <meta charset="utf-8">
@@ -11,54 +12,36 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" th:href="@{/clients/plugins/fontawesome-free/css/all.min.css}">
-    <!--th:href="../clients/plugins/fontawesome-free/css/all.min.css"-->
+    <link rel="stylesheet" href="../static/clients/plugins/fontawesome-free/css/all.min.css">
     <!-- daterange picker -->
-    <link rel="stylesheet" th:href="@{/clients/plugins/daterangepicker/daterangepicker.css}">
-    <!--href="../clients/plugins/daterangepicker/daterangepicker.css"-->
+    <link rel="stylesheet" href="../clients/plugins/daterangepicker/daterangepicker.css">
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" th:href="@{/clients/plugins/icheck-bootstrap/icheck-bootstrap.min.css}">
-    <!--href="../clients/plugins/icheck-bootstrap/icheck-bootstrap.min.css"-->
+    <link rel="stylesheet" href="./clients/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
     <!-- Bootstrap Color Picker -->
-    <link rel="stylesheet" >
-    <!--href="../clients/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
     <!-- Tempusdominus Bootstrap 4 -->
-    <link rel="stylesheet" th:href="@{/clients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css}">
-    <!--href="../clients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
     <!-- Select2 -->
-    <link rel="stylesheet" th:href="@{/clients/plugins/select2/css/select2.min.css}">
-    <!--href="../clients/plugins/select2/css/select2.min.css"-->
-    <link rel="stylesheet" th:href="@{/clients/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css}">
-<!--    href="../clients/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../clients/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
     <!-- Bootstrap4 Duallistbox -->
-    <link rel="stylesheet"  th:href="@{/clients/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css}" >
-    <!--href="../clients/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
     <!-- BS Stepper -->
-    <link rel="stylesheet"  th:href="@{/clients/plugins/bs-stepper/css/bs-stepper.min.css}">
-    <!--href="../clients/plugins/bs-stepper/css/bs-stepper.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/bs-stepper/css/bs-stepper.min.css">
     <!-- dropzonejs -->
-    <link rel="stylesheet"  th:href="@{/clients/plugins/dropzone/min/dropzone.min.css}">
-    <!--href="../clients/plugins/dropzone/min/dropzone.min.css"-->
+    <link rel="stylesheet" href="../clients/plugins/dropzone/min/dropzone.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" th:href="@{/clients/dist/css/adminlte.min.css}">
-<!--    href="../clients/dist/css/adminlte.min.css"-->
-    <link  rel="stylesheet" th:href="@{/css/PagedList.css}"/>
-    <!--href="../css/PagedList.css"-->
-    <script  th:scr="@{/Scripts/autoNumeric-1.9.45.js}"></script>
-    <!--src="../Scripts/autoNumeric-1.9.45.js"-->
-    <script  th:scr="@{/Scripts/autoNumeric-1.8.0-sample.js}"></script>
-    <!--src="../Scripts/autoNumeric-1.8.0-sample.js"-->
-    <script type="text/javascript"  th:scr="@{'https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'}"></script>
-<!--    src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"-->
-    <script  th:scr="@{'https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.8.1/autoNumeric.min.js'}"></script>
-    <!--src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.8.1/autoNumeric.min.js"-->
-    <link rel="stylesheet" th:scr="@{/Scripts/autoNumeric-1.9.45.js}"/>
-    <!--href="../Scripts/autoNumeric-1.9.45.js"-->
-    <link  th:href="@{/css/prettify.css}" rel="stylesheet" type="text/css"/>
-    <!--href="../css/prettify.css"-->
-    <script  th:scr="@{/Scripts/prettify.js}"></script> <!--src="../Scripts/prettify.js"-->
-    <script th:scr="@{/Scripts/json2.js}"></script><!--src="../Scripts/json2.js"-->
-    <script  th:scr="@{/Scripts/smoothScroll.js}"></script><!--src="../Scripts/smoothScroll.js"-->
+    <link rel="stylesheet" href="../clients/dist/css/adminlte.min.css">
+    <link href="../css/PagedList.css" rel="stylesheet" />
+    <script src="../Scripts/autoNumeric-1.9.45.js"></script>
+    <script src="../Scripts/autoNumeric-1.8.0-sample.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/autonumeric/4.8.1/autoNumeric.min.js"></script>
+    <link rel="stylesheet" href="../Scripts/autoNumeric-1.9.45.js" />
+    <link href="../css/prettify.css" rel="stylesheet" type="text/css"/>
+    <script src="../Scripts/prettify.js"></script>
+    <script src="../Scripts/json2.js"></script>
+    <script src="../Scripts/smoothScroll.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -100,8 +83,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img th:src="@{/clients/dist/img/user1-128x128.jpg}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                            <!--src="../clients/dist/img/user1-128x128.jpg"-->
+                            <img src="../clients/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Brad Diesel
@@ -117,8 +99,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img th:src="@{/clients/dist/img/user8-128x128.jpg}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                            <!--src="../clients/dist/img/user8-128x128.jpg"-->
+                            <img src="../clients/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     John Pierce
@@ -134,8 +115,7 @@
                     <a href="#" class="dropdown-item">
                         <!-- Message Start -->
                         <div class="media">
-                            <img th:src="@{/clients/dist/img/user3-128x128.jpg}" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                            <!--src="../clients/dist/img/user3-128x128.jpg"-->
+                            <img src="../clients/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
                             <div class="media-body">
                                 <h3 class="dropdown-item-title">
                                     Nora Silvester
@@ -194,10 +174,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
-        <a  th:href="@{/clients/index3.html}" class="brand-link">
-           <!-- href="../clients/index3.html"-->
-            <img th:src="@{/clients/dist/img/AdminLTELogo.png}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-            <!--src="../clients/dist/img/AdminLTELogo.png"-->
+        <a href="../clients/index3.html" class="brand-link">
+            <img src="../clients/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Web Bán Hàng</span>
         </a>
 
@@ -215,8 +193,7 @@
 
         </div>-->
 
-        <div  th:replace="admin/layout/partial_sidebar.html :: sidebar">
-           <!-- layout:fragment="sidebar"-->
+        <div class="sidebar" layout:fragment="sidebar">
             <!-- content of sidebar goes here -->
         </div>
 
@@ -237,8 +214,7 @@
         <div class="float-right d-none d-sm-block">
             <b>Version</b> 3.2.0-rc
         </div>
-        <strong>Copyright &copy; 2014-2021 <a th:href="@{'https://adminlte.io'}">AdminLTE.io</a>.</strong> All rights reserved.
-        <!--href="https://adminlte.io"-->
+        <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
