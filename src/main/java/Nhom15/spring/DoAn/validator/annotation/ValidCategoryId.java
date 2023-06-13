@@ -1,9 +1,10 @@
 package Nhom15.spring.DoAn.validator.annotation;
 
-import Nhom15.spring.DoAn.validator.ValidUsernameValidator;
+import Nhom15.spring.DoAn.validator.ValidCategoryIdValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
+import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
@@ -11,13 +12,12 @@ import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Target({TYPE,FIELD})
+@Target({TYPE, FIELD})
 @Retention(RUNTIME)
-@Constraint(validatedBy = ValidUsernameValidator.class)
-public @interface ValidUsername {
-    String message() default "Username already exists";
-
-    Class<?>[] groups() default {};
-
+@Constraint(validatedBy = ValidCategoryIdValidator.class)
+@Documented
+public @interface ValidCategoryId {
+    String message() default "Invalid Category ID";
+    Class<?>[] groups() default  {};
     Class<? extends Payload>[] payload() default {};
 }
