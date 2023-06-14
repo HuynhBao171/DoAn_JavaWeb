@@ -8,8 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/")
 public class HomeController {
     @GetMapping
-    public String show()
+    public String home()
     {
-        return "home/index";
+        return "user/home/index";
+    }
+    @RequestMapping("/categories")
+    public String showCategories()
+    {
+        return "user/categories/index";
+    }
+    @RequestMapping("/details")
+    public String showDetails()
+    {
+        return "user/categories/detail";
     }
 }

@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{user/layout/client_layout}">
 <head>
-    <title>Colo Shop</title>
+    <title>Login</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Colo Shop Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./styles/bootstrap4/bootstrap.min.css">
-    <link href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="./plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-    <link rel="stylesheet" type="text/css" href="./plugins/OwlCarousel2-2.2.1/animate.css">
-    <link rel="stylesheet" type="text/css" href="./plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="./styles/categories_styles.css">
-    <link rel="stylesheet" type="text/css" href="./styles/categories_responsive.css">
-    <link rel="stylesheet" type="text/css" href="./styles/main_styles.css">
-    <link rel="stylesheet" type="text/css" href="./styles/responsive.css">
 </head>
 <body>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-lg-6 col-md-8">
-            <h3 class="card-title text-center">Login</h3>
-            <form  th:action="@{/login}" method="post">
-                <fieldset>
-                    <legend>Please login</legend>
-                    <div th:if="${param.error}" class="alert alert-danger">
-                        Invalid username and password.
-                    </div>
-                    <div th:if="${param.logout}" class="alert alert-success">
-                        You have been logged out.
-                    </div>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Username:</label>
-                        <input type="text" required class="form-control" id="username" name="username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Password:</label>
-                        <input type="password" required class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <input type="checkbox" name="remember-me" id="remember-me">
-                        <label for="remember-me">Remember me</label>
-                    </div>
-                    <div class="d-grid gap-2 form-action">
-                        <button type="submit" class="btn btn-primary">Login</button>
-                        <a class="text-primary text-center" href="/register">Don't have account. Sign up?</a>
-                    </div>
-                </fieldset>
-            </form>
+<div layout:fragment="content">
+    <div class="super_container">
+        <div class="main_slider">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8">
+                    <h3 class="card-title text-center"></h3>
+                    <form th:action="@{/login}" method="post">
+                        <fieldset>
+                            <legend>Please login</legend>
+                            <div th:if="${param.error}" class="alert alert-danger">
+                                Invalid username and password.
+                            </div>
+                            <div th:if="${param.logout}" class="alert alert-success">
+                                You have been logged out.
+                            </div>
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username:</label>
+                                <input type="text" required class="form-control" id="username" name="username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password:</label>
+                                <input type="password" required class="form-control" id="password" name="password">
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" name="remember-me" id="remember-me">
+                                <label for="remember-me">Remember me</label>
+                            </div>
+                            <div class="d-grid gap-2 form-action">
+                                <button type="submit" class="btn btn-primary">Login</button>
+                                <a class="text-primary text-center" href="/register">Don't have account. Sign up?</a>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<script src="./js/jquery-3.2.1.min.js"></script>
-<script src="./styles/bootstrap4/popper.js"></script>
-<script src="./styles/bootstrap4/bootstrap.min.js"></script>
-<script src="./plugins/Isotope/isotope.pkgd.min.js"></script>
-<script src="./plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="./plugins/easing/easing.js"></script>
-<script src="./plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
-<script src="./js/categories_custom.js"></script>
-<script src="./js/custom.js"></script>
 </body>
 </html>

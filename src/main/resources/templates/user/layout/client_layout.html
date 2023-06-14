@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
   <title>Colo Shop</title>
@@ -72,8 +73,13 @@
                     <i class="fa fa-angle-down"></i>
                   </a>
                   <ul class="account_selection">
-                    <li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-                    <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+                    <li sec:authorize="isAuthenticated()">
+                      <a th:action="@{/logout}" method="post"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout</a>
+                    </li>
+                    <li sec:authorize="!isAuthenticated()">
+                      <a href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a>
+                    </li>
+                    <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
                   </ul>
                 </li>
               </ul>
@@ -94,12 +100,13 @@
             </div>
             <nav class="navbar">
               <ul class="navbar_menu">
-                <li><a href="#">home</a></li>
-                <li><a href="#">shop</a></li>
+                <li><a href="/">home</a></li>
+                <li><a href="/categories">shop</a></li>
                 <li><a href="#">promotion</a></li>
                 <li><a href="#">pages</a></li>
                 <li><a href="#">blog</a></li>
                 <li><a href="contact.html">contact</a></li>
+                <li><a  href="/admin">Admin</a></li>
               </ul>
               <ul class="navbar_user">
                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
